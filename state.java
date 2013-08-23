@@ -9,7 +9,7 @@ public class state implements iState
 {
     // instance variables - replace the example below with your own
     private int nstate;
-    private int state[5][15][20];
+    private int state[][][];
     public static final int WATER = 0;
     public static final int EARTH = 1;
     public static final int BREAKWOOD = 2;
@@ -23,6 +23,7 @@ public class state implements iState
     public state(int nstate)
     {
         // initialise instance variables
+        state = new int[5][15][20];
         this.nstate = nstate;
     }
 
@@ -32,7 +33,7 @@ public class state implements iState
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int setState(int nstate)
+    public void setState(int nstate)
     {
         // put your code here
         this.nstate = nstate;
@@ -42,8 +43,9 @@ public class state implements iState
         return this.state[nstate][pos.getY()][pos.getX()];
     }
     
+    
     public void updateState(position pos) {
-        ...
+        
     }
     
     

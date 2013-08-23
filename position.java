@@ -19,6 +19,12 @@ public class position
         this.x = x;
         this.y = y;
     }
+    
+    public position()
+    {
+        this.x = 0;
+        this.y = 0;
+    }
 
     /**
      * An example of a method - replace this comment with your own

@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=nstate
+comment0.target=state(int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ state\r\n
+comment1.params=nstate
+comment1.target=void\ setState(int)
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=pos
+comment2.target=int\ getSymbol(position)
+comment3.params=pos
+comment3.target=void\ updateState(position)
+numComments=4
