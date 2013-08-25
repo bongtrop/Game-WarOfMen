@@ -42,22 +42,22 @@ public class WarOfMen extends Ucigame
     public void onKeyRelease()
     {
         if(keyboard.key() == keyboard.W) {
-            if (swordman.getY()>0 && state.getSymbol(swordman.getX(),swordman.getY()-1)==0) {
+            if (state.canWalk(swordman.getX(),swordman.getY()-1)) {
                 swordman.walk(swordman.N);
             }
         }
         if(keyboard.key() == keyboard.S) {
-            if (swordman.getY()<state.MAX_ROW-1 && state.getSymbol(swordman.getX(),swordman.getY()+1)==0) {
+            if (state.canWalk(swordman.getX(),swordman.getY()+1)) {
                 swordman.walk(swordman.S);
             }
         }
          if(keyboard.key() == keyboard.A) {
-            if (swordman.getX()>0 && state.getSymbol(swordman.getX()-1,swordman.getY())==0) {
+            if (state.canWalk(swordman.getX()-1,swordman.getY())) {
                 swordman.walk(swordman.W);
             }
         }
         if(keyboard.key() == keyboard.D) {
-            if (swordman.getX()<state.MAX_COL-1 && state.getSymbol(swordman.getX()+1,swordman.getY())==0) {
+            if (state.canWalk(swordman.getX()+1,swordman.getY())) {
                 swordman.walk(swordman.E);
             }
         }

@@ -34,6 +34,7 @@ public class State
                                 {0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0},
                                 {0,1,0,1,0,0,1,0,1,0,0,1,0,1,0,0,1,0,1,0},
                                 {0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0}}};
+        
     }
 
     /**
@@ -42,10 +43,13 @@ public class State
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int getSymbol(int x, int y)
+    public boolean canWalk(int x, int y)
     {
-        // put your code here
-        return state[0][y][x];
+        if (y<0 || x<0 || y>MAX_ROW || x>MAX_COL || state[0][y][x]==1) {
+            return false;
+        }
+        
+        return true;
     }
     
     public String getImage(int x, int y)
