@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Swordman()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Swordman\r\n
+comment1.params=
+comment1.target=int\ getX()
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=
+comment2.target=int\ getY()
+comment3.params=tid
+comment3.target=void\ walk(int)
+numComments=4
