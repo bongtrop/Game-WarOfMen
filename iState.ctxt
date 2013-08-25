@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.params=stat
-comment0.target=void\ setState(int)
-comment0.text=\r\n\ An\ example\ of\ a\ method\ header\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ \ \ \ the\ result\ produced\ by\ sampleMethod\ \r\n
-comment1.params=pos
-comment1.target=int\ getSymbol(position)
-comment2.params=pos
-comment2.target=void\ updateState(position)
-numComments=3
