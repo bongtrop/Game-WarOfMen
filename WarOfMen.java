@@ -9,11 +9,10 @@ public class WarOfMen extends Ucigame
     
     public void setup()
     {
-        window.size(250, 250);
+        window.size(800, 600);
         window.title("War of men");
         canvas.background(255, 200, 255);
-        pblock = getImage("images/block.png", 255, 255, 255);
-        framerate(30);
+        framerate(15);
         state = new State();
         swordman = new Swordman();
     }
@@ -22,14 +21,19 @@ public class WarOfMen extends Ucigame
     {
         canvas.clear();
        
-        for (int i=0;i<5;i++) {
-            for (int j=0;j<5;j++) {
-                if(state.getSymbol(i,j)==1){
-                    pblock.draw(i*40,j*40);
-                }
+        pblock = getImage(state.getImage(1, 1), 255, 255, 255);
+        pblock.draw(1*state.WIDTH,1*state.WIDTH);
+        
+        
+        for (int i=0;i<state.MAX_COL;i++) {
+            for (int j=0;j<state.MAX_ROW;j++) {
+                
+                pblock = getImage(state.getImage(i, j));
+                pblock.draw(i*state.WIDTH,j*state.WIDTH);
+                
                 if(swordman.getX()==i  && swordman.getY()==j) {
                     pswordman = getImage(swordman.getImage(), 255, 255, 255);
-                    pswordman.draw(i*40,j*40);
+                    pswordman.draw(i*state.WIDTH,j*state.WIDTH);
                 }
             }
         }
@@ -39,22 +43,22 @@ public class WarOfMen extends Ucigame
     {
         if(keyboard.key() == keyboard.W) {
             if (swordman.getY()>0 && state.getSymbol(swordman.getX(),swordman.getY()-1)==0) {
-                swordman.walk(0);
+                swordman.walk(swordman.N);
             }
         }
         if(keyboard.key() == keyboard.S) {
-            if (swordman.getY()<4 && state.getSymbol(swordman.getX(),swordman.getY()+1)==0) {
-                swordman.walk(1);
+            if (swordman.getY()<state.MAX_ROW-1 && state.getSymbol(swordman.getX(),swordman.getY()+1)==0) {
+                swordman.walk(swordman.S);
             }
         }
          if(keyboard.key() == keyboard.A) {
             if (swordman.getX()>0 && state.getSymbol(swordman.getX()-1,swordman.getY())==0) {
-                swordman.walk(2);
+                swordman.walk(swordman.W);
             }
         }
         if(keyboard.key() == keyboard.D) {
-            if (swordman.getX()<4 && state.getSymbol(swordman.getX()+1,swordman.getY())==0) {
-                swordman.walk(3);
+            if (swordman.getX()<state.MAX_COL-1 && state.getSymbol(swordman.getX()+1,swordman.getY())==0) {
+                swordman.walk(swordman.E);
             }
         }
     }

@@ -5,6 +5,9 @@ public class Swordman
     private int y;
     private String pswordman;
     public static final int N = 0;
+    public static final int S = 1;
+    public static final int W = 2;
+    public static final int E = 3;
     
     /**
      * Constructor for objects of class Swordman
