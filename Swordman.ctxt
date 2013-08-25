@@ -9,4 +9,6 @@ comment2.params=
 comment2.target=int\ getY()
 comment3.params=tid
 comment3.target=void\ walk(int)
-numComments=4
+comment4.params=
+comment4.target=java.lang.String\ getImage()
+numComments=5

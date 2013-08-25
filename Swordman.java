@@ -1,16 +1,10 @@
-
-/**
- * Write a description of class Swordman here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Swordman
 {
     // instance variables - replace the example below with your own
     private int x;
     private int y;
-
+    private String pswordman;
+    
     /**
      * Constructor for objects of class Swordman
      */
@@ -19,6 +13,7 @@ public class Swordman
         // initialise instance variables
         x = 0;
         y = 0;
+        pswordman = "images/swordman-0.png";
     }
 
     /**
@@ -43,27 +38,23 @@ public class Swordman
     {
         if (tid==0) {
             y--;
+            pswordman = "images/swordman-1.png";
         }
         if (tid==1) {
             y++;
+            pswordman = "images/swordman-0.png";
         }
         if (tid==2) {
             x--;
+            pswordman = "images/swordman-2.png";
         }
         if (tid==3) {
             x++;
+            pswordman = "images/swordman-3.png";
         }
-        if (y>4) {
-            y--;
-        }
-        if (y<0) {
-            y++;
-        }
-        if (x>4) {
-            x--;
-        }
-        if (x<0) {
-            x++;
-        }
+    }
+    
+    public String getImage() {
+        return pswordman;
     }
 }

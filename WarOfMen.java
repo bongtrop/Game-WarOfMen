@@ -13,7 +13,6 @@ public class WarOfMen extends Ucigame
         window.title("War of men");
         canvas.background(255, 200, 255);
         pblock = getImage("images/block.png", 255, 255, 255);
-        pswordman = getImage("images/swordman.png", 255, 255, 255);
         framerate(30);
         state = new State();
         swordman = new Swordman();
@@ -29,6 +28,7 @@ public class WarOfMen extends Ucigame
                     pblock.draw(i*40,j*40);
                 }
                 if(swordman.getX()==i  && swordman.getY()==j) {
+                    pswordman = getImage(swordman.getImage(), 255, 255, 255);
                     pswordman.draw(i*40,j*40);
                 }
             }
