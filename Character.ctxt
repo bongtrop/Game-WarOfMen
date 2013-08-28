@@ -1,10 +1,16 @@
 #BlueJ class context
 comment0.params=
-comment0.target=int\ getX()
-comment1.params=
-comment1.target=int\ getY()
+comment0.target=Character()
+comment1.params=tid
+comment1.target=void\ walk(int)
 comment2.params=tid
-comment2.target=void\ walk(int)
+comment2.target=void\ turn(int)
 comment3.params=
 comment3.target=java.lang.String\ getImage()
-numComments=4
+comment4.params=obj
+comment4.target=boolean\ attack(Skill)
+comment5.params=
+comment5.target=void\ die()
+comment6.params=
+comment6.target=boolean\ isDied()
+numComments=7
