@@ -1,7 +1,6 @@
 #BlueJ class context
-comment0.params=
-comment0.target=State()
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ State\r\n
+comment0.params=numState
+comment0.target=State(int)
 comment1.params=x\ y
 comment1.target=boolean\ checkOutState(int,\ int)
 comment2.params=x\ y

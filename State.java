@@ -1,15 +1,10 @@
 
-/**
- * Write a description of class State here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class State
 {
     // instance variables - replace the example below with your own
     private int x;
     private int state[][][];
+    private int numState;
     public static final int MAX_COL = 20;
     public static final int MAX_ROW = 15;
     public static final int WIDTH = 40;
@@ -19,10 +14,7 @@ public class State
     public static final int WOOD = 3;
     public static final int BWOOD = 4;
     
-    /**
-     * Constructor for objects of class State
-     */
-    public State()
+    public State(int numState)
     {
         state = new int[][][] {
                                {
@@ -59,6 +51,7 @@ public class State
                                  {4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,3}
                                }};
         
+        this.numState = numState;
     }
     
     public boolean checkOutState(int x, int y) 
@@ -86,14 +79,14 @@ public class State
                                      "images/wood.png",
                                      "images/bwood.png"};
 
-        return img[state[1][y][x]];
+        return img[state[numState][y][x]];
     }
     
     public void setSymbol(int x, int y, int value) {
-        state[1][y][x] = value;
+        state[numState][y][x] = value;
     }
     
     public int getSymbol(int x, int y) {
-        return state[1][y][x];
+        return state[numState][y][x];
     }
 }

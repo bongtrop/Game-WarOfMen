@@ -23,7 +23,7 @@ public class WarOfMen extends Ucigame
         window.title("War Of Men");
         canvas.background(214, 187, 150);
         framerate(20);
-        state = new State();
+        state = new State(0);
         kapook = new Kapook();
         sanook = new Sanook();
         panda = new Panda();
