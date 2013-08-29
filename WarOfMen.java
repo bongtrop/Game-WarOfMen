@@ -16,6 +16,9 @@ public class WarOfMen extends Ucigame
     private Sound skapook;
     private Sound ssanook;
     private Sound spanda;
+    private Sound skapookdie;
+    private Sound ssanookdie;
+    private Sound spandadie;
     
     public void setup()
     {
@@ -23,7 +26,7 @@ public class WarOfMen extends Ucigame
         window.title("War Of Men");
         canvas.background(214, 187, 150);
         framerate(20);
-        state = new State(0);
+        state = new State(2);
         kapook = new Kapook();
         sanook = new Sanook();
         panda = new Panda();
@@ -40,6 +43,9 @@ public class WarOfMen extends Ucigame
         skapook = getSound("sounds/kapook.mp3");
         ssanook = getSound("sounds/sanook.mp3");
         spanda = getSound("sounds/panda.mp3");
+        skapookdie = getSound("sounds/kapookdie.mp3");
+        ssanookdie = getSound("sounds/sanookdie.mp3");
+        spandadie = getSound("sounds/pandadie.mp3");
         
         music.loop();
     }
@@ -142,28 +148,34 @@ public class WarOfMen extends Ucigame
     
     private void killPanda()
     {
-        if (panda.getX()==fire.getX() && panda.getY()==fire.getY() && !fire.isHide()) 
+        if (panda.getX()==fire.getX() && panda.getY()==fire.getY() && !fire.isHide() && !panda.isDied()) 
         {
              panda.die();
+             spandadie.play();
         }
         
-        if (panda.getX()==arrow.getX() && panda.getY()==arrow.getY() && !arrow.isHide())
+        if (panda.getX()==arrow.getX() && panda.getY()==arrow.getY() && !arrow.isHide() && !panda.isDied())
         {
             panda.die();
+            spandadie.play();
         }
     }
     
     private void killKapook()
     {
-        if (kapook.getX()==bamboo.getX() && kapook.getY()==bamboo.getY() && !bamboo.isHide()) {
+        if (kapook.getX()==bamboo.getX() && kapook.getY()==bamboo.getY() && !bamboo.isHide() && !kapook.isDied())
+        {
              kapook.die();
+             skapookdie.play();
         }
     }
     
     private void killSanook()
     {
-        if (sanook.getX()==bamboo.getX() && sanook.getY()==bamboo.getY() && !bamboo.isHide()) {
+        if (sanook.getX()==bamboo.getX() && sanook.getY()==bamboo.getY() && !bamboo.isHide() && !sanook.isDied())
+        {
              sanook.die();
+             ssanookdie.play();
         }
     }
     

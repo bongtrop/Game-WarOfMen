@@ -64,7 +64,7 @@ public class State
     
     public boolean canWalk(int x, int y)
     {
-        if (checkOutState(x, y) || state[0][y][x]!=0) {
+        if (checkOutState(x, y) || state[numState][y][x]!=0) {
             return false;
         }
         
