@@ -1,4 +1,9 @@
-
+/**
+  * This class use to make arrow (arrow is weapon of sanook)
+  * 
+  * @author (Apiwat Ruemsuk) 
+  * @version (29/8/2556)
+**/
 public class Arrow extends Position implements Skill
 {
     private boolean hide;

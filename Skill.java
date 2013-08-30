@@ -1,3 +1,9 @@
+/**
+  * This interface of all skill 
+  * 
+  * @author (Apiwat Ruemsuk) 
+  * @version (29/8/2556)
+**/
 public interface Skill
 {
     public void start(int x, int y, int tid);

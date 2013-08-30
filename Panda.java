@@ -1,3 +1,9 @@
+/**
+  * This class use to make panda (panda is a character in game use bamboo for attack)
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class Panda extends Character
 {
     public Panda()

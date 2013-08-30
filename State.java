@@ -1,3 +1,9 @@
+/**
+  * This class use to manage about map in game
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 
 public class State
 {

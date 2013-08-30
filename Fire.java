@@ -1,4 +1,9 @@
-
+/**
+  * This class use to make fire (fire is weapon of kapook)
+  * 
+  * @author (Nont Panda) 
+  * @version (29/8/2556)
+**/
 public class Fire extends Position implements Skill
 {
     private boolean hide;

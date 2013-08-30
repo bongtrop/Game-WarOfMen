@@ -1,3 +1,9 @@
+/**
+  * This class use to make sanook (sanook is a character in game use arrow for attack)
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class Sanook extends Character
 {
     public Sanook()

@@ -1,3 +1,9 @@
+/**
+  * This class use to make kapook (kapook is a character in game use magic for attack)
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class Kapook extends Character
 {
     public Kapook()

@@ -1,13 +1,11 @@
-
 /**
- * Write a description of class Character here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+  * This class is Super class of character
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class Character extends Position
 {
-    // instance variables - replace the example below with your own
     protected String character[];
     protected String outCharacter;
     protected int tid;

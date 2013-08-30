@@ -1,4 +1,9 @@
-
+/**
+  * This class use to make bamboo (bamboo is weapon of panda)
+  * 
+  * @author (Nont Panda) 
+  * @version (29/8/2556)
+**/
 public class Bamboo extends Position implements Skill
 {
     private boolean hide;

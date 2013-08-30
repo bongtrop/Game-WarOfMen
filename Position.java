@@ -1,3 +1,9 @@
+/**
+  * This class have many method of position
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class Position
 {
     protected int x;

@@ -1,5 +1,11 @@
 import java.util.Random;
 
+/**
+  * Use to control Character by computer
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class AI
 {
     private Random rnd;

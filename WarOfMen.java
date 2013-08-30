@@ -1,5 +1,10 @@
 import ucigame.*;
-
+/**
+  * This class use to create Applet , draw canvas and play sound
+  * 
+  * @author (Pongsakorn Sommalai) 
+  * @version (29/8/2556)
+**/
 public class WarOfMen extends Ucigame
 {
     private State state;
@@ -19,6 +24,7 @@ public class WarOfMen extends Ucigame
     private Sound skapookdie;
     private Sound ssanookdie;
     private Sound spandadie;
+    
     
     public void setup()
     {
