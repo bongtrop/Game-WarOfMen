@@ -31,7 +31,7 @@ public class WarOfMen extends Ucigame
         window.size(800, 600);
         window.title("War Of Men");
         canvas.background(214, 187, 150);
-        framerate(20);
+        framerate(15);
         state = new State(2);
         kapook = new Kapook();
         sanook = new Sanook();
@@ -39,7 +39,7 @@ public class WarOfMen extends Ucigame
         arrow = new Arrow();
         fire = new Fire();
         bamboo = new Bamboo();
-        ai = new AI(20);
+        ai = new AI(15);
         
         isStart = false;
         numScene = 0;
@@ -220,6 +220,20 @@ public class WarOfMen extends Ucigame
                 {
                     panda.walk(panda.E);
                 }
+            }
+        }
+        tid = ai.attack(panda.getX(), sanook.getX(), panda.getY(), sanook.getY());
+        if (tid!=-1 && !sanook.isDied()) {
+            panda.turn(tid);
+            if (panda.attack(bamboo)) {
+                spanda.play();
+            }
+        }
+        tid = ai.attack(panda.getX(), kapook.getX(), panda.getY(), kapook.getY());
+        if (tid!=-1 && !kapook.isDied()) {
+            panda.turn(tid);
+            if (panda.attack(bamboo)) {
+                spanda.play();
             }
         }
         

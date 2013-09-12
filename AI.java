@@ -26,10 +26,31 @@ public class AI
         return -1;
     }
     
+    public int attack(int x1, int x2, int y1, int y2)
+    {
+        if (x1==x2) {
+            if (y1>y2) {
+                return 0;
+            } else {
+                return 1;
+            }
+        }
+        else if (y1==y2) {
+            if (x1>x2) {
+                return 2;
+            } else {
+                return 3;
+            }
+        } else {
+            return -1;
+        }
+    }
+    
+    
     public boolean randomAttack()
     {
         int tid = rnd.nextInt(speed);
-        if (tid==0) {
+        if (tid>12) {
             return true;
         }
         return false;
