@@ -11,7 +11,8 @@ public class WarOfMen extends Ucigame
     private Kapook kapook;
     private Sanook sanook;
     private Panda panda;
-    private Skill arrow, fire, bamboo;
+    private Weapon arrow, fire, bamboo;
+    private Skill sob, bod;
     private Image pblock, pcharacter, pskill;
     private AI ai;
     private boolean isStart;
@@ -32,14 +33,16 @@ public class WarOfMen extends Ucigame
         window.title("War Of Men");
         canvas.background(214, 187, 150);
         framerate(15);
-        state = new State(2);
         kapook = new Kapook();
         sanook = new Sanook();
         panda = new Panda();
         arrow = new Arrow();
         fire = new Fire();
         bamboo = new Bamboo();
+        sob = new SeaOfBamboo();
+        bod = new BambooOfDied();
         ai = new AI(15);
+        state = new State(ai.randomState());
         
         isStart = false;
         numScene = 0;
@@ -69,6 +72,17 @@ public class WarOfMen extends Ucigame
         boolean iarrow = false;
         boolean ifire = false;
         boolean ibamboo = false;
+        boolean skill1 = false;
+        boolean skill2 = false;
+        String sPanda="";
+        skill1=sob.deley();
+        skill2=bod.deley();
+        if (sob.getStatus()) {
+            sPanda="r";
+        }
+        if (bod.getStatus()) {
+            sPanda="g";
+        }
         
         for (int i=0;i<state.MAX_COL;i++) {
             for (int j=0;j<state.MAX_ROW;j++) {
@@ -87,7 +101,7 @@ public class WarOfMen extends Ucigame
                 }
                 
                 if(panda.getX()==i  && panda.getY()==j) {
-                    pcharacter = getImage(panda.getImage(), 255, 255, 255);
+                    pcharacter = getImage(panda.getImage(sPanda), 255, 255, 255);
                     pcharacter.draw(i*state.WIDTH,j*state.WIDTH);
                 }
                 
@@ -107,6 +121,16 @@ public class WarOfMen extends Ucigame
                     pskill = getImage(bamboo.getImage(), 255, 255, 255);
                     pskill.draw(i*state.WIDTH,j*state.WIDTH);
                     ibamboo = true;
+                }
+                
+                if (skill1 && i%2==1 && j%2==1) {
+                    pskill = getImage(sob.getImage(), 255, 255, 255);
+                    pskill.draw(i*state.WIDTH,j*state.WIDTH);
+                }
+                
+                if (skill2 && (panda.getX()+3>=i && panda.getX()-3<=i) && (panda.getY()+3>=j && panda.getY()-3<=j)) {
+                    pskill = getImage(sob.getImage(), 255, 255, 255);
+                    pskill.draw(i*state.WIDTH,j*state.WIDTH);
                 }
             }
         }
@@ -129,6 +153,28 @@ public class WarOfMen extends Ucigame
             checkCrash(bamboo);
         }
         
+        if (skill2) {
+            if ((panda.getX()+3>=kapook.getX() && panda.getX()-3<=kapook.getX()) && (panda.getY()+3>=kapook.getY() && panda.getY()-3<=kapook.getY()) && !kapook.isDied()) {
+                kapook.die();
+                skapookdie.play();
+            }
+            if ((panda.getX()+3>=sanook.getX() && panda.getX()-3<=sanook.getX()) && (panda.getY()+3>=sanook.getY() && panda.getY()-3<=sanook.getY()) && !sanook.isDied()) {
+                sanook.die();
+                ssanookdie.play();
+            }
+        }
+        
+        if (skill1) {
+            if (kapook.getX()%2==1 && kapook.getY()%2==1 && !kapook.isDied()) {
+                kapook.die();
+                skapookdie.play();
+            }
+            if (sanook.getX()%2==1 && sanook.getY()%2==1 && !sanook.isDied()) {
+                sanook.die();
+                ssanookdie.play();
+            }
+        }
+        
         killPanda();
         killSanook();
         killKapook();
@@ -139,6 +185,7 @@ public class WarOfMen extends Ucigame
             panda.clear();
             kapook.clear();
             sanook.clear();
+            state = new State(ai.randomState());
         }
         
         if (sanook.isDied() && kapook.isDied()) {
@@ -147,6 +194,7 @@ public class WarOfMen extends Ucigame
             panda.clear();
             kapook.clear();
             sanook.clear();
+            state = new State(ai.randomState());
         }
         
         changeAI();
@@ -243,9 +291,18 @@ public class WarOfMen extends Ucigame
                 spanda.play();
             }
         }
+        
+        tid = ai.randomSkill();
+        if (tid==1 && !sob.getStatus() && !bod.getStatus()) {
+            sob.setStatus(true);
+        }
+        if (tid==0 && !bod.getStatus() && !sob.getStatus()) {
+            bod.setStatus(true);
+        }
+            
     }
     
-    private void checkCrash(Skill obj)
+    private void checkCrash(Weapon obj)
     {
         if (!state.checkOutState(obj.getX(), obj.getY())) 
         {

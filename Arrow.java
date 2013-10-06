@@ -4,7 +4,7 @@
   * @author (Apiwat Ruemsuk) 
   * @version (29/8/2556)
 **/
-public class Arrow extends Position implements Skill
+public class Arrow extends Position implements Weapon
 {
     private boolean hide;
     private int tid;

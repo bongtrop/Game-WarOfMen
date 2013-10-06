@@ -28,4 +28,9 @@ public class Panda extends Character
         tid = S;
         outCharacter = character[tid];
     }
+    
+    public String getImage(String status) {
+        String[] parts = outCharacter.split("/");
+        return parts[0]+"/"+status+parts[1];
+    }
 }

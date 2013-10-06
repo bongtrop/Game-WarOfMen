@@ -1,16 +1,10 @@
 #BlueJ class context
-comment0.params=x\ y\ tid
-comment0.target=void\ start(int,\ int,\ int)
+comment0.params=
+comment0.target=boolean\ deley()
 comment1.params=
-comment1.target=void\ next()
-comment2.params=
-comment2.target=boolean\ isHide()
+comment1.target=boolean\ getStatus()
+comment2.params=status
+comment2.target=void\ setStatus(boolean)
 comment3.params=
-comment3.target=void\ setHide()
-comment4.params=
-comment4.target=java.lang.String\ getImage()
-comment5.params=
-comment5.target=int\ getX()
-comment6.params=
-comment6.target=int\ getY()
-numComments=7
+comment3.target=java.lang.String\ getImage()
+numComments=4

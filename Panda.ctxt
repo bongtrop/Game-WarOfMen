@@ -3,4 +3,6 @@ comment0.params=
 comment0.target=Panda()
 comment1.params=
 comment1.target=void\ clear()
-numComments=2
+comment2.params=status
+comment2.target=java.lang.String\ getImage(java.lang.String)
+numComments=3

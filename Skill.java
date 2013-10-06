@@ -1,16 +1,13 @@
 /**
   * This interface of all skill 
   * 
-  * @author (Apiwat Ruemsuk) 
+  * @author (Nont Panda) 
   * @version (29/8/2556)
 **/
 public interface Skill
 {
-    public void start(int x, int y, int tid);
-    public void next();
-    public boolean isHide();
-    public void setHide();
+    public boolean deley();
+    public boolean getStatus();
+    public void setStatus(boolean status);
     public String getImage();
-    public int getX();
-    public int getY();
 }

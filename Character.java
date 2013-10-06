@@ -49,7 +49,7 @@ public class Character extends Position
         return outCharacter;
     }
     
-    public boolean attack(Skill obj) {
+    public boolean attack(Weapon obj) {
         if (isDied) {
             return false;
         }

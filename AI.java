@@ -26,6 +26,15 @@ public class AI
         return -1;
     }
     
+    public int randomSkill()
+    {
+        int tid = rnd.nextInt(speed*10);
+        if (tid<2) {
+            return tid;
+        }
+        return -1;
+    }
+    
     public int attack(int x1, int x2, int y1, int y2)
     {
         if (x1==x2) {
@@ -55,4 +64,9 @@ public class AI
         }
         return false;
     }
+    
+    public int randomState() {
+        int tid = rnd.nextInt(3);
+        return tid%3;
+    }    
 }

@@ -4,7 +4,7 @@
   * @author (Nont Panda) 
   * @version (29/8/2556)
 **/
-public class Fire extends Position implements Skill
+public class Fire extends Position implements Weapon
 {
     private boolean hide;
     private int tid;
