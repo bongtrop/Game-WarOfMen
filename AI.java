@@ -28,7 +28,7 @@ public class AI
     
     public int randomSkill()
     {
-        int tid = rnd.nextInt(speed*10);
+        int tid = rnd.nextInt(speed*9);
         if (tid<2) {
             return tid;
         }

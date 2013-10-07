@@ -46,7 +46,19 @@ public class WarOfMen extends Ucigame
         
         isStart = false;
         numScene = 0;
-        scene = new String[] {"images/title.png", "images/youwin.png", "images/gameover.png"};
+        scene = new String[] {  "images/title.png", 
+                                "images/s1.png",
+                                "images/s2.png",
+                                "images/s3.png",
+                                "images/s4.png", 
+                                "images/s5.png",
+                                "images/s6.png",
+                                "images/s7.png",
+                                "images/s8.png",
+                                "images/s9.png",
+                                "images/s10.png",
+                                "images/youwin.png", 
+                                "images/gameover.png"};
         
         music = getSound("sounds/music.mp3");
         skapook = getSound("sounds/kapook.mp3");
@@ -180,7 +192,7 @@ public class WarOfMen extends Ucigame
         killKapook();
         
         if (panda.isDied()) {
-            numScene = 1;
+            numScene = 11;
             isStart = false;
             panda.clear();
             kapook.clear();
@@ -189,7 +201,7 @@ public class WarOfMen extends Ucigame
         }
         
         if (sanook.isDied() && kapook.isDied()) {
-            numScene = 2;
+            numScene = 12;
             isStart = false;
             panda.clear();
             kapook.clear();
@@ -388,7 +400,10 @@ public class WarOfMen extends Ucigame
         }
         
         if(keyboard.key() == keyboard.SPACE) {
-            isStart = true;
+            if (numScene >= 10) {
+                isStart=true;
+            }
+            numScene++;
         }
     }
 }
