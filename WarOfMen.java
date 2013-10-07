@@ -135,12 +135,12 @@ public class WarOfMen extends Ucigame
                     ibamboo = true;
                 }
                 
-                if (skill1 && i%2==1 && j%2==1) {
+                if (skill1 && i%2==1 && j%2==1 && state.getSymbol(i,j)==state.GROUND) {
                     pskill = getImage(sob.getImage(), 255, 255, 255);
                     pskill.draw(i*state.WIDTH,j*state.WIDTH);
                 }
                 
-                if (skill2 && (panda.getX()+3>=i && panda.getX()-3<=i) && (panda.getY()+3>=j && panda.getY()-3<=j)) {
+                if (skill2 && (panda.getX()+3>=i && panda.getX()-3<=i) && (panda.getY()+3>=j && panda.getY()-3<=j) && state.getSymbol(i,j)==state.GROUND) {
                     pskill = getImage(sob.getImage(), 255, 255, 255);
                     pskill.draw(i*state.WIDTH,j*state.WIDTH);
                 }

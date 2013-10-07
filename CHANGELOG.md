@@ -1,6 +1,10 @@
 Game-WarOfMen Change-log
 ==========================
 
+0.3.4
+-----
+    * Fix Bug Skill Panda
+
 0.3.3
 -----
     * Edit README.MD
