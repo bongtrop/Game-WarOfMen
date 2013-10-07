@@ -1,9 +1,23 @@
-python-btlogic changelog
+Game-WarOfMen Change-log
 ==========================
+
+0.3.2
+-----
+    * Add Story to Game
+
+0.3.1
+-----
+    * Modify AI can use skill
+	* Change Class Skill to Weapon
+	* Create Class Skill
+
+0.2.6
+-----
+    * Modify AI can lock target
 
 0.2.5
 -----
-    * Add CHANGELOG.md and README.md
+    * Add CHANGELOG.MD and README.MD
 
 0.2.4
 -----
@@ -12,7 +26,7 @@ python-btlogic changelog
 0.2.3
 -----
     * Add sound in die
-	* Change Maps for Present and reabstract in state class
+	* Change Maps for Present and re-abstract in state class
 
 0.2.2
 -----
@@ -26,5 +40,4 @@ python-btlogic changelog
 
 0.2.0
 -----
-    * first public release (superceded unpythonic internal library)
-
+    * first public release
