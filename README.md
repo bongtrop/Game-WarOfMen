@@ -36,11 +36,10 @@ ENTER attack
 
 
 Written by 
-		   Pongsakorn Sommalai <bongtrop@gmail.com>.
 
-		   Apiwat Ruemsuk
-		   
-		   Natanont Praserttitikun
+	Pongsakorn Sommalai <bongtrop@gmail.com>.
+	Apiwat Ruemsuk
+	Natanont Praserttitikun
 
 All code is under a BSD-style license.
 
