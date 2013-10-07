@@ -1,6 +1,10 @@
 Game-WarOfMen Change-log
 ==========================
 
+0.3.3
+-----
+    * Edit README.MD
+
 0.3.2
 -----
     * Add Story to Game
